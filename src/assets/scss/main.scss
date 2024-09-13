@@ -1,11 +1,12 @@
 .background {
-    img {
-        mask-image: url('../images/main/text-image.png');
-        -webkit-mask-image: url('../images/main/text-image.png');
-        mask-repeat: no-repeat;
-        mask-position: center;
-        mask-size: auto;
-        -webkit-mask-size: auto;
-        transition: mask-size 0.3s ease;
-    }
+    background-image: url(../images/main/main-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    mask-image: url('../images/main/text-image.png');
+    -webkit-mask-image: url('../images/main/text-image.png');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    transition: mask-size 0.3s ease;
 }
