@@ -9,4 +9,50 @@
     mask-position: center;
     mask-size: contain;
     transition: mask-size 0.3s ease;
+    margin: 0 100px;
+}
+
+css html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* 기본적으로 스크롤 숨김 */
+}
+
+#wrap {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.about {
+    height: 400vh;
+    /* 모든 섹션을 포함하는 높이 */
+    transition: transform 0.5s ease;
+    /* 부드러운 전환 효과 */
+}
+
+.about-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    background-color: lightblue;
+    /* 각 섹션 색상 */
+}
+
+.scroll-area {
+    height: 100vh;
+    /* 스크롤 영역 높이 */
+    background-color: white;
+    /* 배경 색상 추가 */
+    padding: 20px;
+    /* 패딩 추가 */
+    overflow-y: auto;
+    /* 스크롤 가능 */
+}
+
+.scroll-area::-webkit-scrollbar {
+    display: none;
 }
