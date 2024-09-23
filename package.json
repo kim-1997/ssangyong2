@@ -30,6 +30,8 @@
         "sass": "^1.75.0"
     },
     "dependencies": {
-        "lottie-web": "^5.12.2"
+        "express": "^4.21.0",
+        "lottie-web": "^5.12.2",
+        "nodemon": "^3.1.6"
     }
 }
