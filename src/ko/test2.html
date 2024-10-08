@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./include/head.html") %>
+    <!-- <img src="../resources/assets/images/main/1.jpg" /> -->
+    <body>
+        <div class="main-kv">
+            <div class="main-kv__inner">
+                <div class="main-board">
+                    <div class="main-board__cont">
+                        <div class="main-board__pc">
+                            <ul class="main-board__list">
+                                <li>
+                                    <div class="main-board__image">
+                                        <img src="../resources/assets/images/main/dummy05.jpg" />
+                                        <div class="side-space">
+                                            <div class="side-space__inner side-space__inner--green">Macrogen</div>
+                                        </div>
+                                        <div class="main-board__description">
+                                            최첨단 분석 인프라 갖춘<br />
+                                            전문 유전체 분석 서비스
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="main-board__image">
+                                        <img src="../resources/assets/images/main/dummy01.jpg" />
+                                        <div class="side-space">
+                                            <div class="side-space__inner side-space__inner--green">Macrogen</div>
+                                        </div>
+                                        <div class="main-board__description">
+                                            빅데이터, AI 기반<br />
+                                            글로벌 정밀의학 헬스케어 리더
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="main-board__image">
+                                        <img src="../resources/assets/images/main/dummy02.jpg" />
+                                        <div class="side-space">
+                                            <div class="side-space__inner side-space__inner--orange">Service</div>
+                                        </div>
+                                        <div class="main-board__description">
+                                            장내 미생물로 확인하는 건강지수<br />
+                                            더바이옴 골드
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="main-board__list main-board__list--center">
+                                <li>
+                                    <div class="main-board__image">
+                                        <img src="../resources/assets/images/main/dummy03.jpg" />
+                                        <div class="side-space">
+                                            <div class="side-space__inner side-space__inner--green">Macrogen</div>
+                                        </div>
+                                        <div class="main-board__description">
+                                            인류의 건강한 미래를 만드는 기업<br />
+                                            마크로젠
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="main-board__image">
+                                        <img src="../resources/assets/images/main/dummy09.jpg" />
+                                        <div class="side-space">
+                                            <div class="side-space__inner side-space__inner--orange">Service</div>
+                                        </div>
+                                        <div class="main-board__description">
+                                            세상에 없던 내 몸 사용설명서<br />
+                                            젠톡 GenTok
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="main-board__image">
+                                        <img src="../resources/assets/images/main/dummy04.jpg" />
+                                        <div class="side-space">
+                                            <div class="side-space__inner side-space__inner--skyblue">News</div>
+                                        </div>
+                                        <div class="main-board__description">
+                                            국내 최초 비 의료기관<br />
+                                            바이오뱅크 개설 허가
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="main-board__list">
+                                <li>
+                                    <div class="main-board__image">
+                                        <img src="../resources/assets/images/main/dummy08.jpg" />
+                                        <div class="side-space">
+                                            <div class="side-space__inner side-space__inner--skyblue">News</div>
+                                        </div>
+                                        <div class="main-board__description">
+                                            젠톡, 맞춤형 유전상담<br />
+                                            AI 챗봇서비스 오픈
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="main-board__image">
+                                        <img src="../resources/assets/images/main/dummy06.jpg" />
+                                        <div class="side-space">
+                                            <div class="side-space__inner side-space__inner--skyblue">News</div>
+                                        </div>
+                                        <div class="main-board__description">
+                                            Ultima Genomics UG100™<br />
+                                            최첨단 유전체 분석 시스템<br />
+                                            아시아 최초 도입
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="main-board__image">
+                                        <img src="../resources/assets/images/main/dummy07.jpg" />
+                                        <div class="side-space">
+                                            <div class="side-space__inner side-space__inner--darkblue">Global</div>
+                                        </div>
+                                        <div class="main-board__description">
+                                            마크로젠 유럽,<br />
+                                            EMQN CIC와 ISO17025 인증 획득
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">a</div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        const moveBox = document.querySelector('.main-board__pc');
+        const mainBoard = document.querySelector('.main-board');
+
+        function mainMove(e) {
+            // 현재 화면 크기
+            var winWidth = window.innerWidth;
+            var winHeight = window.innerHeight;
+            var contWidth = moveBox.clientWidth;
+            var contHeight = moveBox.clientHeight;
+
+            // 현재 마우스 위치를 비율로 변환
+            var nowX = (-1 + (e.pageX / winWidth) * 2).toFixed(2);
+            var nowY = (1 - (e.pageY / winHeight) * 2).toFixed(2);
+
+            // 이동할 위치 계산
+            var movePositionX = -1 * (nowX * ((contWidth + 100 - winWidth) / 2));
+            var movePositionY = nowY * ((contHeight - 70 - winHeight) / 2);
+
+            moveBox.style.transform = 'translate(' + movePositionX + 'px, ' + movePositionY + 'px)';
+        }
+
+        // 이벤트 리스너 추가 (예: mousemove)
+        mainBoard.addEventListener('mousemove', mainMove);
+    </script>
+
+    <script>
+        // const inner = document.querySelector('.main-kv__inner');
+        // const moveFactorx = 0.16; // 이동 비율
+        // const moveFactory = 0.05; // 이동 비율
+
+        // document.addEventListener('mousemove', (event) => {
+        //     // 화면 중앙 좌표
+        //     const centerX = window.innerWidth / 2;
+        //     const centerY = window.innerHeight / 2;
+
+        //     // 마우스 포인터 위치
+        //     const mouseX = event.clientX;
+        //     const mouseY = event.clientY;
+
+        //     // inner의 위치를 반대로 계산
+        //     const translateX = (centerX - mouseX) * moveFactorx;
+        //     const translateY = (centerY - mouseY) * moveFactory;
+
+        //     // 계산된 위치를 transform에 적용
+        //     inner.style.transform = `translate(-50%, -50%) translate(${translateX}px, ${translateY}px)`;
+        // });
+    </script>
+</html>
