@@ -1,111 +1,12 @@
-.background {
-    height: 100vh;
-    margin: 0 100px;
-    background-image: url(../images/main/main-bg.jpg);
-    background-position: center;
-    background-size: cover;
-    mask-image: url('../images/main/text-image.png');
-    -webkit-mask-image: url('../images/main/text-image.png');
-    mask-position: center;
-    mask-size: contain;
-    mask-repeat: no-repeat;
-    transition: mask-size 0.3s ease;
-}
-
 html,
 body {
     margin: 0;
     padding: 0;
-    // overflow: hidden;
-    /* 기본적으로 스크롤 숨김 */
+    font-family: "Noto Sans KR",
+        sans-serif;
 }
 
-#wrap {
-    height: 100vh;
-    overflow: hidden;
-}
-
-.about {
-    height: 400vh;
-    /* 모든 섹션을 포함하는 높이 */
-    transition: transform 0.5s ease;
-    /* 부드러운 전환 효과 */
-}
-
-.about-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: lightblue;
-    font-size: 2em;
-    /* 각 섹션 색상 */
-}
-
-.scroll-area {
-    height: 100vh;
-    /* 스크롤 영역 높이 */
-    background-color: white;
-    /* 배경 색상 추가 */
-    /* 패딩 추가 */
-    overflow-y: auto;
-    /* 스크롤 가능 */
-
-    .content {
-        height: 100vh;
-
-        &--01 {
-            background-color: bisque;
-        }
-
-        &--02 {
-            background-color: rgb(217, 245, 153);
-        }
-
-        &--03 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            background-color: rgb(236, 167, 221);
-
-            ul {
-                display: flex;
-
-
-                li {
-                    width: 300px;
-                    height: 200px;
-                    background-color: brown;
-                }
-            }
-        }
-
-        &--04 {
-            background-color: rgb(188, 184, 228);
-        }
-    }
-}
-
-// body::-webkit-scrollbar {
-//     display: none;
-// }
-
-.slide-area {
-    height: 100vh;
-    background-color: brown;
-
-    ul {
-        display: flex;
-
-        li {
-            gap: 20px;
-        }
-    }
-}
-
-
-
+// main-kv
 .main-kv {
     &__inner {
         overflow: hidden;
@@ -161,17 +62,17 @@ body {
     }
 
     &__description {
-        width: 100%;
         position: absolute;
         left: 50%;
         bottom: 40px;
         transform: translateX(-50%);
+        width: 100%;
         font-size: 24px;
         font-weight: 700;
         line-height: 34px;
         color: #fff;
-        letter-spacing: -0.72px;
         text-align: center;
+        letter-spacing: -0.72px;
     }
 }
 
@@ -224,25 +125,117 @@ body {
         color: #fff;
         z-index: 1;
 
-        &--green {
-            background-color: #8CD05F;
+        &--blue01 {
+            background-color: #4B6A9C;
         }
 
-        &--orange {
-            background-color: #F58662;
+        &--blue02 {
+            background-color: #1A3F7C;
         }
 
-        &--skyblue {
-            background-color: #56A1DE;
-        }
-
-        &--darkblue {
-            background-color: #0061BB;
+        &--blue03 {
+            background-color: #414B5C;
         }
     }
 }
 
-.container {
-    background-color: aliceblue;
-    height: 900px;
+
+
+// main-slogan
+.main-slogan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(../images/main/main-slogan_bg.jpg);
+    font-size: 60px;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    line-height: 90px;
+    letter-spacing: -1.8px;
+}
+
+.highlight {
+    position: relative;
+    display: inline-block;
+    z-index: 0;
+    padding: 0 10px;
+}
+
+.bg {
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #8CD05F 0%, #56A1DE 77.25%);
+    width: 0;
+    transform-origin: left;
+    transition: transform 0.5s ease;
+    z-index: -1;
+    border-radius: 10px;
+
+}
+
+// main-service
+.main-service {
+    &__slide {
+        height: 100vh;
+        position: relative;
+    }
+
+    &__list {
+        height: 100%;
+    }
+
+    &__item {
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        background-image: none;
+
+
+        &--01 {
+            background-image: url(../images/main/service-bg01.jpg);
+        }
+
+        &--02 {
+            background-image: url(../images/main/service-bg02.jpg);
+        }
+
+        &--03 {
+            background-image: url(../images/main/service-bg03.jpg);
+        }
+
+
+
+    }
+
+    &__button {
+        position: absolute;
+        top: 30%;
+        left: 0;
+        z-index: 1;
+
+        li {
+            color: #fff;
+            opacity: 0.4;
+            width: 310px;
+            padding: 30px 50px 30px 150px;
+            border-radius: 0 999px 999px 0;
+            cursor: pointer;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 40px;
+            letter-spacing: -0.9px;
+            transition: all 0.5s;
+
+            &.active {
+                background: linear-gradient(90deg, #8CD05F 0%, #56A1DE 77.25%);
+                opacity: 1;
+                width: 320px;
+            }
+        }
+    }
 }
